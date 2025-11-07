@@ -218,8 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6551fddc9f57c48b833fe0eb33c439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshRenderer: {fileID: 0}
-  offsetSpeed: 1
+  offsetSpeed: 0.2
 --- !u!1 &574451435
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,8 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6551fddc9f57c48b833fe0eb33c439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshRenderer: {fileID: 0}
-  offsetSpeed: 1
+  offsetSpeed: 0.05
 --- !u!1 &1569083066
 GameObject:
   m_ObjectHideFlags: 0

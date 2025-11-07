@@ -2,11 +2,17 @@ using UnityEngine;
 
 public class LoopMap : MonoBehaviour
 {
-    public MeshRenderer meshRenderer;
+    private MeshRenderer meshRenderer;
     public float offsetSpeed = 1f;
 
     void Start()
     {
         this.meshRenderer = GetComponent<MeshRenderer>();
+    }
+
+    void Update()
+    {
+        Vector2 offset = Vector2.right * offsetSpeed * Time.deltaTime;
+        meshRenderer.material.SetTextureOffset("_BaseMap", meshRenderer.material.mainTextureOffset + offset);
     }
 }
