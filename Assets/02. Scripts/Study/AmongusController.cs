@@ -2,11 +2,19 @@ using UnityEngine;
 
 public class AmongusController : MonoBehaviour
 {
+    private Rigidbody rb;
+
     public float moveSpeed = 5f;
-    public float turnSpeed = 40f;
+    public float turnSpeed = 5f;
+    public float jumpPower = 10f;
 
     private float h, v;
     private Vector3 dir;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     void Update()
     {
@@ -14,13 +22,27 @@ public class AmongusController : MonoBehaviour
         v = Input.GetAxis("Vertical");
         dir = new Vector3(h, 0, v).normalized;
 
+        Jump();
+    }
+
+    private void FixedUpdate()
+    {
         Move();
         Turn();
     }
 
     private void Move()
     {
-        transform.position += dir * moveSpeed * Time.deltaTime;
+        // 트랜스폼 이동
+        // transform.position += dir * moveSpeed * Time.deltaTime;
+        // transform.Translate(dir * moveSpeed * Time.deltaTime);
+
+        // 리지드바디 이동 - 1
+        // rb.linearVelocity = dir * moveSpeed;
+
+        // 리지드바디 이동 - 2
+        Vector3 targetPosition = rb.position + dir * moveSpeed;
+        rb.MovePosition(targetPosition);
     }
 
     private void Turn()
@@ -29,8 +51,17 @@ public class AmongusController : MonoBehaviour
 
         if (h != 0 || v != 0)
         {
-            Quaternion newRotation = Quaternion.LookRotation(dir);
-            transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * turnSpeed);
+            Quaternion targetRotation = Quaternion.LookRotation(dir);
+            Quaternion newRotation = Quaternion.Slerp(rb.rotation, targetRotation, turnSpeed);
+            rb.MoveRotation(newRotation);
+        }
+    }
+
+    private void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
         }
     }
 }
