@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 90067692}
   - component: {fileID: 90067693}
   - component: {fileID: 90067694}
+  - component: {fileID: 90067695}
   m_Layer: 0
   m_Name: Point10
   m_TagString: Point10
@@ -336,6 +337,18 @@ PolygonCollider2D:
       - {x: 0, y: -0.25}
       - {x: 0.5, y: 0}
   m_UseDelaunayMesh: 0
+--- !u!114 &90067695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90067691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57dfd2054632b6a46863978c10882caa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &126305040
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,6 +360,7 @@ GameObject:
   - component: {fileID: 126305041}
   - component: {fileID: 126305042}
   - component: {fileID: 126305043}
+  - component: {fileID: 126305044}
   m_Layer: 0
   m_Name: Point10
   m_TagString: Point10
@@ -475,6 +489,18 @@ PolygonCollider2D:
       - {x: 0, y: -0.25}
       - {x: 0.5, y: 0}
   m_UseDelaunayMesh: 0
+--- !u!114 &126305044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126305040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57dfd2054632b6a46863978c10882caa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &370493759
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,6 +814,7 @@ GameObject:
   - component: {fileID: 469691017}
   - component: {fileID: 469691018}
   - component: {fileID: 469691019}
+  - component: {fileID: 469691020}
   m_Layer: 0
   m_Name: Point10
   m_TagString: Point10
@@ -916,6 +943,18 @@ PolygonCollider2D:
       - {x: 0, y: -0.25}
       - {x: 0.5, y: 0}
   m_UseDelaunayMesh: 0
+--- !u!114 &469691020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469691016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57dfd2054632b6a46863978c10882caa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &515679906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,6 +1174,7 @@ GameObject:
   - component: {fileID: 773037179}
   - component: {fileID: 773037180}
   - component: {fileID: 773037181}
+  - component: {fileID: 773037182}
   m_Layer: 0
   m_Name: Point10
   m_TagString: Point10
@@ -1263,6 +1303,18 @@ PolygonCollider2D:
       - {x: 0, y: -0.25}
       - {x: 0.5, y: 0}
   m_UseDelaunayMesh: 0
+--- !u!114 &773037182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773037178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57dfd2054632b6a46863978c10882caa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &836926830
 GameObject:
   m_ObjectHideFlags: 0
@@ -2132,7 +2184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftHandleRb: {fileID: 1201509914}
   rightHandleRb: {fileID: 836926833}
-  pushPower: 300
+  pushPower: 50
   releasePower: 10
 --- !u!1 &1849332205
 GameObject:
@@ -2146,7 +2198,7 @@ GameObject:
   - component: {fileID: 1849332208}
   - component: {fileID: 1849332207}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Gameover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2161,7 +2213,7 @@ Transform:
   m_GameObject: {fileID: 1849332205}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.61, y: -17.4, z: 0}
+  m_LocalPosition: {x: 0.53, y: -18.55, z: 0}
   m_LocalScale: {x: 20.873877, y: 0.79696, z: 4.981}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2279,6 +2331,7 @@ GameObject:
   - component: {fileID: 1891205122}
   - component: {fileID: 1891205123}
   - component: {fileID: 1891205124}
+  - component: {fileID: 1891205125}
   m_Layer: 0
   m_Name: Point50
   m_TagString: Point50
@@ -2346,7 +2399,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa, type: 3}
-  m_Color: {r: 0.87169814, g: 0.090459146, b: 0.090459146, a: 1}
+  m_Color: {r: 0.09019608, g: 0.87058824, b: 0.13349205, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2407,6 +2460,18 @@ PolygonCollider2D:
       - {x: 0, y: -0.25}
       - {x: 0.5, y: 0}
   m_UseDelaunayMesh: 0
+--- !u!114 &1891205125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891205121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57dfd2054632b6a46863978c10882caa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -15,6 +15,12 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        ChangeColor changeColor = other.gameObject.GetComponent<ChangeColor>();
+        if (changeColor != null)
+        {
+            changeColor.Hitcolor();
+        }
+        
         switch (other.gameObject.tag)
         {
             case "Point10":
