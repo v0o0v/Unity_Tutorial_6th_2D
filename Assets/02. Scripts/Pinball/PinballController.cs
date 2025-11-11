@@ -14,9 +14,12 @@ public class PinballController : MonoBehaviour
 
     private void Update()
     {
-        isLeftUp = Input.GetKeyDown(KeyCode.LeftArrow);
-        isRightUp = Input.GetKeyDown(KeyCode.RightArrow);
-        
+        isLeftUp = Input.GetKey(KeyCode.LeftArrow);
+        isRightUp = Input.GetKey(KeyCode.RightArrow);
+    }
+
+    private void FixedUpdate()
+    {
         if (isLeftUp)
         {
             leftHandleRb.AddTorque(pushPower, ForceMode2D.Impulse);
@@ -34,11 +37,6 @@ public class PinballController : MonoBehaviour
         {
             rightHandleRb.AddTorque(releasePower);
         }
-    }
-
-    private void FixedUpdate()
-    {
-        
     }
 
     public void addScore(int score)
