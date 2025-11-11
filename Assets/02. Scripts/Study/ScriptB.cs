@@ -6,6 +6,5 @@ public class ScriptB : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(scriptA.number1);
     }
 }

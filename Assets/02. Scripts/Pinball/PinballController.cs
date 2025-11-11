@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class PinballController : MonoBehaviour
@@ -9,9 +8,16 @@ public class PinballController : MonoBehaviour
     public float pushPower = 10f;
     public float releasePower = 30f;
 
+    private bool isLeftUp, isRightUp;
+
+    private int score = 0;
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        isLeftUp = Input.GetKeyDown(KeyCode.LeftArrow);
+        isRightUp = Input.GetKeyDown(KeyCode.RightArrow);
+        
+        if (isLeftUp)
         {
             leftHandleRb.AddTorque(pushPower, ForceMode2D.Impulse);
         }
@@ -19,8 +25,8 @@ public class PinballController : MonoBehaviour
         {
             leftHandleRb.AddTorque(-releasePower);
         }
-        
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+
+        if (isRightUp)
         {
             rightHandleRb.AddTorque(-pushPower, ForceMode2D.Impulse);
         }
@@ -28,5 +34,26 @@ public class PinballController : MonoBehaviour
         {
             rightHandleRb.AddTorque(releasePower);
         }
+    }
+
+    private void FixedUpdate()
+    {
+        
+    }
+
+    public void addScore(int score)
+    {
+        this.score += score;
+        Debug.Log(score + " 획득");
+    }
+
+    public int getScore()
+    {
+        return this.score;
+    }
+
+    public void resetScore()
+    {
+        this.score = 0;
     }
 }
