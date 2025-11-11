@@ -3,9 +3,10 @@ using UnityEngine;
 public class CatController : MonoBehaviour
 {
     public float jumpPower = 5f;
-    public int jumpCount;
+    public float limitVelocity = 5f;
 
     private Rigidbody2D catRb;
+    private int jumpCount;
 
     private void Start()
     {
@@ -23,6 +24,8 @@ public class CatController : MonoBehaviour
         {
             catRb.AddForceY(jumpPower, ForceMode2D.Impulse);
             jumpCount++;
+            if (catRb.linearVelocityY >= limitVelocity)
+                catRb.linearVelocityY = limitVelocity;
         }
     }
 

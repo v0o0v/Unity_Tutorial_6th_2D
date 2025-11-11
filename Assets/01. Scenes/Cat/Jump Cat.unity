@@ -405,6 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpPower: 20
+  limitVelocity: 7
 --- !u!50 &574451440
 Rigidbody2D:
   serializedVersion: 5
