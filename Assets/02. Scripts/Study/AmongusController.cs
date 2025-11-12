@@ -6,6 +6,7 @@ public class AmongusController : MonoBehaviour
     public float turnSpeed = 5f;
     public float jumpPower = 10f;
 
+    
     private float h, v;
     private Vector3 dir;
 
