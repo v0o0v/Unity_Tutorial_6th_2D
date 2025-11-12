@@ -64,6 +64,7 @@ public class AmongusController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            anim.SetTrigger("Jump");
             rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
         }
     }
