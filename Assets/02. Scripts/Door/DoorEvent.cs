@@ -1,9 +1,7 @@
-using System;
 using UnityEngine;
 
 public class DoorEvent : MonoBehaviour
 {
-    
     Animator doorAnim;
 
     private void Start()
@@ -13,11 +11,13 @@ public class DoorEvent : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        doorAnim.SetTrigger("Open");
+        if (other.CompareTag("Player"))
+            doorAnim.SetTrigger("Open");
     }
 
     private void OnTriggerExit(Collider other)
     {
-        doorAnim.SetTrigger("Close");
+        if (other.CompareTag("Player"))
+            doorAnim.SetTrigger("Close");
     }
 }
