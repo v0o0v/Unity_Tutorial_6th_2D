@@ -449,6 +449,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 954791137571096581, guid: 4de7f86b0c1bd0c4b877147048fc5192, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 954791137571096581, guid: 4de7f86b0c1bd0c4b877147048fc5192, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2707055009502302288, guid: 4de7f86b0c1bd0c4b877147048fc5192, type: 3}
       propertyPath: m_Name
       value: Amongus
@@ -491,6 +499,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4449980437056022690, guid: 4de7f86b0c1bd0c4b877147048fc5192, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5209797918889870913, guid: 4de7f86b0c1bd0c4b877147048fc5192, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5209797918889870913, guid: 4de7f86b0c1bd0c4b877147048fc5192, type: 3}
+      propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
