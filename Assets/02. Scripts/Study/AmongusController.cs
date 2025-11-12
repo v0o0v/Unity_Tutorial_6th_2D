@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class AmongusController : MonoBehaviour
 {
-    private Rigidbody rb;
-
     public float moveSpeed = 5f;
     public float turnSpeed = 5f;
     public float jumpPower = 10f;
@@ -11,9 +9,13 @@ public class AmongusController : MonoBehaviour
     private float h, v;
     private Vector3 dir;
 
+    private Rigidbody rb;
+    private Animator anim;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -21,7 +23,8 @@ public class AmongusController : MonoBehaviour
         h = Input.GetAxis("Horizontal");
         v = Input.GetAxis("Vertical");
         dir = new Vector3(h, 0, v).normalized;
-
+        
+        anim.SetBool("IsWalk", h != 0 || v != 0);
         Jump();
     }
 

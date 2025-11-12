@@ -449,6 +449,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1206320554221205274, guid: 4de7f86b0c1bd0c4b877147048fc5192, type: 3}
+      propertyPath: turnSpeed
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 954791137571096581, guid: 4de7f86b0c1bd0c4b877147048fc5192, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
