@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class AmongusController : MonoBehaviour
@@ -5,7 +6,7 @@ public class AmongusController : MonoBehaviour
     public float moveSpeed = 5f;
     public float turnSpeed = 5f;
     public float jumpPower = 10f;
-
+    
     
     private float h, v;
     private Vector3 dir;
@@ -67,6 +68,24 @@ public class AmongusController : MonoBehaviour
         {
             anim.SetTrigger("Jump");
             rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+        }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            anim.SetBool("IsGround", true);    
+        }
+
+        
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            anim.SetBool("IsGround", false);
         }
     }
 }
