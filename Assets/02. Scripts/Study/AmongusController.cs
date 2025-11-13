@@ -66,6 +66,7 @@ public class AmongusController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            anim.SetBool("IsGround", false);
             anim.SetTrigger("Jump");
             rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
         }
@@ -81,11 +82,11 @@ public class AmongusController : MonoBehaviour
         
     }
 
-    private void OnCollisionExit(Collision other)
-    {
-        if (other.gameObject.CompareTag("Ground"))
-        {
-            anim.SetBool("IsGround", false);
-        }
-    }
+    // private void OnCollisionExit(Collision other)
+    // {
+    //     if (other.gameObject.CompareTag("Ground"))
+    //     {
+    //         anim.SetBool("IsGround", false);
+    //     }
+    // }
 }
